@@ -1,3 +1,28 @@
+<?php
+$history = array();
+
+function addToHistory($expression, $result) {
+  global $history;
+  $history[] = array('expression' => $expression, 'esult' => $result);
+}
+
+if (isset($_POST['calc'])) {
+  $expression = $_POST['expression'];
+  $result = eval($expression);
+  addToHistory($expression, $result);
+  $display = $result;
+} elseif (isset($_POST['clear'])) {
+  $display = '';
+  $history = array();
+} else {
+  $display = '';
+}
+
+?>
+  <meta name="description" content="A simple calculator built with PHP, HTML, and CSS.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
 <body>
     <div class="spacer"></div>

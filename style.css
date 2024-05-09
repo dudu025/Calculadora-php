@@ -1,5 +1,9 @@
 body {
+<<<<<<< HEAD
     background-color: #000000;
+=======
+    background-color: #061ef5;
+>>>>>>> 075a6dbe48131be0736671bf4578ef9226f01729
     width: 100vw;
     height: 100vh;
     display: flex;
